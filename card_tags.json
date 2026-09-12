@@ -1,0 +1,566 @@
+{
+ "card023_shadow_lurking_black": [
+  "Attack"
+ ],
+ "card024_breath_of_the_evil_black": [
+  "Attack"
+ ],
+ "card025_wish_of_reflection_black": [
+  "DrawMoreTagWithEcon"
+ ],
+ "card026_void_corruption_black": [
+  "Attack"
+ ],
+ "card027_wish_of_despair_black": [
+  "Discover"
+ ],
+ "card028_crawling_sound_black": [
+  "Attack",
+  "Retain",
+  "Discard1"
+ ],
+ "card029_will_eater_black": [
+  "Attack"
+ ],
+ "WeaponMaster": [
+  "Attack"
+ ],
+ "card030_crystal_cage_blue": [],
+ "card031_soul_candle_blue": [],
+ "card032_fire_soul_blue": [],
+ "card033_crystal_greatshield_blue": [],
+ "card034_phantom_echo_blue": [
+  "ExhaustTag"
+ ],
+ "card035_wish_of_fate_blue": [
+  "Draw3"
+ ],
+ "card036_crystal_barrier_blue": [
+  "Retain"
+ ],
+ "card037_demon_block_blue": [],
+ "card038_void_fire_orange": [
+  "Attack",
+  "Draw"
+ ],
+ "card039_airbomb_suprise_orange": [
+  "Attack"
+ ],
+ "card040_soul_splitting_frost_orange": [
+  "Attack",
+  "Draw"
+ ],
+ "card041_ice_wall_orange": [
+  "Attack",
+  "Draw"
+ ],
+ "card042_abyssal_fire_grenade_orange": [
+  "Attack",
+  "Draw"
+ ],
+ "card043_blazing_sacrifice_orange": [
+  "Attack",
+  "Draw"
+ ],
+ "card044_searing_will_orange": [
+  "Attack",
+  "Draw"
+ ],
+ "card045_chaotic_thunder_orange": [
+  "Attack"
+ ],
+ "card046_forbidden_flames_orange": [
+  "Attack",
+  "Discard1",
+  "Draw"
+ ],
+ "card047_soul_torment_orange": [
+  "Attack",
+  "Draw"
+ ],
+ "MultipleAreaAttackgun": [
+  "Attack"
+ ],
+ "card048_soul_cracked_wings_purple": [],
+ "card049_fallen_wings_purple": [
+  "Attack"
+ ],
+ "card050_shadow_duet_purple": [],
+ "card051_madness_feather_blade_purple": [
+  "Attack"
+ ],
+ "card052_wings_of_despair_purple": [
+  "Attack"
+ ],
+ "card053_decayed_wings_purple": [
+  "Discard1"
+ ],
+ "card054_wing_of_the_evil_god_purple": [],
+ "card055_abyssal_phantom_purple": [],
+ "card056_phantom_flight_purple": [
+  "Attack"
+ ],
+ "card057_blade_of_fear_red": [
+  "Attack",
+  "Discard1"
+ ],
+ "card058_shadow_slayer_red": [
+  "Attack"
+ ],
+ "card059_claw_of_the_dead_red": [
+  "Attack"
+ ],
+ "card060_spectral_assault_red": [],
+ "card061_spectral_spiral_red": [
+  "Attack"
+ ],
+ "card062_corrupting_wheel_red": [
+  "Attack",
+  "Retain"
+ ],
+ "card063_crimson_devourer_red": [
+  "Attack"
+ ],
+ "card064_sword_of_fate_red": [
+  "Attack"
+ ],
+ "card065_gargoyle_strike_red": [
+  "Attack"
+ ],
+ "card066_black_mist_greataxe_red": [
+  "Attack"
+ ],
+ "card001_strike_red_clone": [
+  "Attack"
+ ],
+ "card001_strike_red": [
+  "Attack"
+ ],
+ "card002_strike_red": [
+  "Attack"
+ ],
+ "card003_forward_strike_red": [
+  "Attack"
+ ],
+ "card004_charge_attack_black": [
+  "Attack"
+ ],
+ "card005_move_purple": [],
+ "card006_void_bomb_orange": [
+  "Attack",
+  "Draw"
+ ],
+ "card007_thunder_strike_yellow": [
+  "Attack",
+  "Lighting"
+ ],
+ "card008_phantom_thunder_orange": [
+  "Attack",
+  "Draw"
+ ],
+ "card009_phantom_strike_yellow": [
+  "Attack"
+ ],
+ "card010_crystal_shield_blue": [],
+ "card011_soul_crystal_blue": [],
+ "card012_potion_pocket_white": [
+  "ExhaustTag",
+  "Add Potion"
+ ],
+ "Slash_Red_example": [
+  "Attack"
+ ],
+ "Push Back big": [
+  "Attack"
+ ],
+ "Cross swing": [
+  "Attack"
+ ],
+ "card013_leap_white": [
+  "Fleeting"
+ ],
+ "card014_phantom_stab_white": [
+  "Attack",
+  "Fleeting"
+ ],
+ "card015_curse_white": [
+  "OneShot"
+ ],
+ "card016_bleed_white": [
+  "OneShot",
+  "Harmful",
+  "Fleeting"
+ ],
+ "card017_strength_potion_white": [
+  "OneShot",
+  "Retain",
+  "Potion"
+ ],
+ "card018_dexterity_potion_white": [
+  "OneShot",
+  "Retain",
+  "Potion"
+ ],
+ "card019_block_potion_white": [
+  "OneShot",
+  "Retain",
+  "Potion"
+ ],
+ "card020_rage_potion_white": [
+  "OneShot",
+  "Retain",
+  "Potion"
+ ],
+ "card021_draw_potion_white": [
+  "OneShot",
+  "Retain",
+  "Draw3",
+  "Potion"
+ ],
+ "card022_energize_potion_white": [
+  "OneShot",
+  "Retain",
+  "Potion"
+ ],
+ "card067_phantom_barrage_yellow": [
+  "Attack"
+ ],
+ "card068_iron_madman_yellow": [],
+ "card069_eclipse_snare__yellow": [
+  "Attack"
+ ],
+ "card070_spread_shot_yellow": [
+  "Attack"
+ ],
+ "card071_homing_bullets_yellow": [
+  "Attack"
+ ],
+ "card072_rain_of_stars_yellow": [
+  "Attack"
+ ],
+ "card073_soul_splitting_lightning_yellow": [
+  "Attack"
+ ],
+ "card074_scorching_shacles_yellow": [
+  "Attack"
+ ],
+ "card075_thunder_advance_yellow": [
+  "Attack",
+  "Lighting"
+ ],
+ "card100_crystal_fall_blue": [
+  "Attack",
+  "Bomb"
+ ],
+ "card101_heavy_bombs_orange": [
+  "Attack",
+  "Bomb"
+ ],
+ "card102_crystal_impact_blue": [
+  "Attack",
+  "Bomb"
+ ],
+ "card103_runes_bomb_orange": [
+  "Attack",
+  "Bomb"
+ ],
+ "card104_crystal_pulse_blue": [
+  "Attack",
+  "Bomb"
+ ],
+ "card105_chain_bomb_orange": [
+  "Attack",
+  "Bomb"
+ ],
+ "card106_crystal_rain_blue": [
+  "Attack"
+ ],
+ "card107_gasoline_orange": [
+  "Attack"
+ ],
+ "card116_sand_explosion_orange": [
+  "Attack",
+  "Chain",
+  "Draw"
+ ],
+ "card117_lightning_pistol_yellow": [
+  "Attack",
+  "Chain"
+ ],
+ "card118_quicksand_vortex_orange": [
+  "Attack",
+  "Draw"
+ ],
+ "card119_chain_throwing_yellow": [
+  "Attack",
+  "Chain"
+ ],
+ "card120_sand_claws_orange": [
+  "Attack",
+  "Chain"
+ ],
+ "card121_electric_crossbow_yellow": [
+  "Attack",
+  "Chain"
+ ],
+ "card122_sand_spiral_orange": [],
+ "card123_thunder_mask_yellow": [],
+ "card076_chopping_red": [
+  "Attack",
+  "Evolve"
+ ],
+ "card077_crystal_boulder_blue": [
+  "Evolve"
+ ],
+ "card078_horizontal_slash_red": [
+  "Attack",
+  "Evolve"
+ ],
+ "card079_tear_crystal_blue": [
+  "Evolve"
+ ],
+ "card080_hammer_shock_red_card080_hammer_shock_red 1": [
+  "Attack",
+  "Evolve"
+ ],
+ "card080_hammer_shock_red": [
+  "Attack",
+  "Evolve"
+ ],
+ "card081_feather_crystal_blue": [
+  "Evolve"
+ ],
+ "card082_charge_axe_red": [
+  "Attack",
+  "Evolve"
+ ],
+ "card083_polygonal_of_crystal_blue": [],
+ "card084_ring_blade_red": [
+  "Attack",
+  "Exert"
+ ],
+ "card085_great_fireball_orange": [
+  "Attack",
+  "Exert",
+  "Draw"
+ ],
+ "card086_rabies_thrust_red": [
+  "Attack",
+  "Exert"
+ ],
+ "card087_fire_bolt_orange": [
+  "Attack",
+  "Draw",
+  "Exert"
+ ],
+ "card088_weapon_rack_red": [
+  "Exert"
+ ],
+ "card089_rain_of_fire_orange": [
+  "Attack"
+ ],
+ "card090_war_drums_red": [
+  "Attack"
+ ],
+ "card091_fireball_orange": [
+  "Attack",
+  "Exert"
+ ],
+ "card092_armored_fist_red": [
+  "Attack"
+ ],
+ "card093_poisoned_arrow_yellow": [
+  "Attack"
+ ],
+ "card094_shadow_strike_red": [
+  "Attack"
+ ],
+ "card095_potion_shot_yellow": [
+  "Attack"
+ ],
+ "card096_flame_whip_red": [
+  "Attack"
+ ],
+ "card097_multi_potion_shot_yellow": [
+  "Attack"
+ ],
+ "card098_angels_lance_red": [
+  "Attack"
+ ],
+ "card099_archery_kit_yellow": [
+  "Attack"
+ ],
+ "card124_bio_shield_black": [
+  "Attack",
+  "Shadow"
+ ],
+ "card125_bone_sword_black": [
+  "Attack",
+  "Shadow"
+ ],
+ "card126_dark_wings_black": [
+  "Attack",
+  "Shadow"
+ ],
+ "card127_blood_blast_black": [
+  "Attack",
+  "Shadow"
+ ],
+ "card128_bone_spears_black": [
+  "Attack",
+  "Shadow"
+ ],
+ "card129_dark_portal_black": [
+  "Attack",
+  "Shadow"
+ ],
+ "card135_crysta_link_blue": [
+  "Attack",
+  "Discard1"
+ ],
+ "card136_beheader_red": [
+  "Attack",
+  "Discard1"
+ ],
+ "card137_flash_purple": [
+  "Attack",
+  "Discard1"
+ ],
+ "card138_doomsday_comet_orange": [
+  "Attack",
+  "Discard1"
+ ],
+ "card139_three_barreled_rifle_yellow": [
+  "Attack",
+  "Discard1"
+ ],
+ "card140_dark_atom_black": [
+  "Attack",
+  "Discard1"
+ ],
+ "card108_crystal_crown_blue": [
+  "Attack"
+ ],
+ "card109_wind_slingshot_yellow": [
+  "Attack",
+  "Storm"
+ ],
+ "card110_crystal_swirl_blue": [
+  "Attack"
+ ],
+ "card111_storm_shotgun_yellow": [
+  "Attack"
+ ],
+ "card112_ore_gift_blue": [
+  "Attack"
+ ],
+ "card113_multishot_yellow": [
+  "Attack"
+ ],
+ "card114_storm_peak_blue": [
+  "Storm"
+ ],
+ "card115_dynamo_yellow": [
+  "Storm"
+ ],
+ "card130_ghost_move_black": [
+  "Attack",
+  "ExhaustTag",
+  "Swirl"
+ ],
+ "card131_demon_power_black": [
+  "Attack",
+  "ExhaustTag",
+  "Swirl"
+ ],
+ "card132_demon_portal_black": [
+  "Swirl",
+  "ExhaustTag"
+ ],
+ "card133_profane_ground_black": [
+  "Attack",
+  "Swirl",
+  "ExhaustTag"
+ ],
+ "card134_grab_strike_black": [
+  "Attack",
+  "Swirl",
+  "ExhaustTag"
+ ],
+ "BOPFocus_nouse2": [],
+ "Slash(Advance)_nouse": [
+  "Attack"
+ ],
+ "Slash(Advance)_concept_nouse": [
+  "Attack"
+ ],
+ "Slash(Advance)_concept_nouse2": [
+  "Attack"
+ ],
+ "Slash(Advance)_knockback": [
+  "Attack"
+ ],
+ "Slash(Advance)_nouse2": [
+  "Attack"
+ ],
+ "Slash_Grey": [
+  "Attack"
+ ],
+ "Move (Advance)_nouse": [],
+ "Move_noUse": [],
+ "Mini Bomb_Grey - 1": [
+  "Attack"
+ ],
+ "Kaboom_NoUse": [
+  "Attack"
+ ],
+ "Mini Bomb (advnace)_nouse": [
+  "Attack",
+  "Discard"
+ ],
+ "Mini Bomb_Grey": [
+  "Attack"
+ ],
+ "Shield(Advance)_nouse": [],
+ "Shield_Grey": [],
+ "Random Thunder": [
+  "Attack"
+ ],
+ "BOPFocus_nouse": [],
+ "Darkpulse Orange_test": [
+  "Attack"
+ ],
+ "BOPFocus_P029": [],
+ "Cloak and Dagger_nouse": [],
+ "RYUFocusRed": [],
+ "Kaboom Stop Movement": [
+  "Attack"
+ ],
+ "Kaboom Homing": [
+  "Attack"
+ ],
+ "Kaboom Rotate With Detector": [
+  "Attack"
+ ],
+ "RYUFocusBlue": [],
+ "GWFocus": [],
+ "Small Step": [],
+ "Side Step": [],
+ "Dagger_nouse": [
+  "Attack"
+ ],
+ "Minibomb": [
+  "Attack"
+ ],
+ "freestep": [],
+ "freemana": [],
+ "Explosion Trap": [
+  "Attack"
+ ],
+ "RYUFocusYellow": [],
+ "Dagger_test": [
+  "Attack"
+ ],
+ "Shield(Advance)_nouse2": [],
+ "Shield_nouse": []
+}
