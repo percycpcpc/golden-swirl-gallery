@@ -73,6 +73,9 @@ input[type=search]:focus,select:focus{outline:2px solid var(--ink);outline-offse
 .num{font-weight:600;color:var(--ink);border-bottom:1.5px dotted var(--ink-3)}
 .na{color:var(--ink-3)}
 .tagchip{display:inline-block;background:var(--hl);border:1px solid var(--rule);border-radius:99px;padding:1px 9px;margin:0 4px 3px 0;font-size:11.5px;color:var(--ink)}
+button.tagchip{cursor:pointer;font:inherit;line-height:inherit}
+button.tagchip:hover{border-color:var(--ink-3)}
+button.tagchip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .req{display:inline-flex;align-items:center;gap:2px;margin-right:5px;vertical-align:1px}
 .req i{width:8px;height:8px;border-radius:50%;display:inline-block;box-shadow:0 0 0 1px rgba(0,0,0,.12) inset}
 .reqn{font-size:10.5px;color:var(--ink-3);margin-left:2px;font-family:'IBM Plex Mono',monospace}
@@ -154,6 +157,7 @@ tr.grp .gk{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-
     <option value="n">Name A-Z</option>
     <option value="c">Colour, then number</option>
   </select>
+  <select id="tagf" aria-label="Filter by tag"><option value="">All tags</option></select>
   <div class="seg" id="view">
     <button data-v="grid" aria-pressed="false">Grid</button>
     <button data-v="lg" aria-pressed="false">Large</button>
@@ -260,7 +264,7 @@ function reqHtml(c,i){
     (e.n>6?`<span class="reqn">×${e.n}</span>`:'')+`</span>`;
 }
 
-let active=null, view='table', mode='res', tab='cards', lang='en';
+let active=null, tagF=null, view='table', mode='res', tab='cards', lang='en';
 const totals={};
 CARDS.forEach(c=>{(totals[c.c] ??= {n:0,v:0}); totals[c.c].n++; totals[c.c].v+=c.v||0;});
 const ORDER=Object.keys(totals).sort((a,b)=>totals[b].v-totals[a].v);
@@ -271,6 +275,19 @@ $('langs').innerHTML = LOCS.map(l=>`<button data-l="${l}" aria-pressed="${l==='e
 $('rail').innerHTML=ORDER.map(c=>`<button class="sw" data-c="${c}" aria-pressed="false">
   <span class="dot" style="background:${HUES[c]}"></span><span class="nm">${c[0].toUpperCase()+c.slice(1)}</span><br>
   <span class="mt">${totals[c].n} cards · ${fmt(totals[c].v)} picks</span></button>`).join('');
+
+function buildTagf(){
+  const loc=lang==='all'?'en':lang;
+  const L=TAGS.map(t=>[t.key,CARDS.filter(c=>(c.tags||[]).includes(t.key)).length])
+    .filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]||tagName(a[0],loc).localeCompare(tagName(b[0],loc)));
+  const cur=tagF||'';
+  $('tagf').innerHTML='<option value="">All tags</option>'+L.map(([k,n])=>
+    `<option value="${esc(k)}"${k===cur?' selected':''}>${esc(tagName(k,loc))} · ${n}</option>`).join('');
+}
+buildTagf();
+$('tagf').addEventListener('change',e=>{tagF=e.target.value||null;render();});
+document.addEventListener('click',e=>{const b=e.target.closest('.tagchip[data-tag]');if(!b)return;
+  tagF=tagF===b.dataset.tag?null:b.dataset.tag;$('tagf').value=tagF||'';render();});
 
 const gridEl=$('grid'),rowsEl=$('rows'),headEl=$('head'),tblwrap=$('tblwrap'),qEl=$('q'),
       sortEl=$('sort'),countEl=$('count'),emptyEl=$('empty'),clearEl=$('clear'),
@@ -284,7 +301,7 @@ function list(){
     return LOCS.some(l=>{const t=T(c,l);
       return t.n.toLowerCase().includes(q)||t.d.toLowerCase().includes(q)||t.s.join(' ').toLowerCase().includes(q);});
   };
-  let L=CARDS.filter(c=>(!active||c.c===active)&&hit(c));
+  let L=CARDS.filter(c=>(!active||c.c===active)&&(!tagF||(c.tags||[]).includes(tagF))&&hit(c));
   const nm=c=>T(c,lang==='all'?'en':lang).n;
   const by={'id':(a,b)=>a.id-b.id,'v-':(a,b)=>(b.v??-1)-(a.v??-1),'v+':(a,b)=>(a.v??1e9)-(b.v??1e9),
     'w-':(a,b)=>(b.w??-1)-(a.w??-1),'w+':(a,b)=>(a.w??1e9)-(b.w??1e9),'n':(a,b)=>nm(a).localeCompare(nm(b)),'c':(a,b)=>ORDER.indexOf(a.c)-ORDER.indexOf(b.c)||a.id-b.id}[sortEl.value];
@@ -331,7 +348,7 @@ function render(){
     rowsEl.innerHTML=L.map(c=>`<tr data-id="${c.id}">
       <td class="tdimg"><img loading="lazy" src="${c.img}" alt=""></td>
       <td class="idc">${String(c.id).padStart(3,'0')}</td>
-      <td class="keyc">${(c.tags&&c.tags.length)?c.tags.map(k=>`<span class="tagchip">${esc(tagName(k,lang))}</span>`).join(''):'<span class="na">—</span>'}</td>
+      <td class="keyc">${(c.tags&&c.tags.length)?c.tags.map(k=>`<button class="tagchip" data-tag="${esc(k)}"${k===tagF?' aria-pressed="true"':''}>${esc(tagName(k,lang))}</button>`).join(''):'<span class="na">—</span>'}</td>
       <td class="namec">${esc(T(c,lang).n)}</td>
       <td class="cc"><i style="background:${HUES[c.c]}"></i>${c.c}</td>
       <td class="spc">${c.st.cost??''}</td>
@@ -427,7 +444,7 @@ function copy(text,btn){
 
 $('langs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;lang=b.dataset.l;
   $('langs').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.l===lang)));
-  render();renderTags();renderMods();});
+  buildTagf();render();renderTags();renderMods();});
 $('rail').addEventListener('click',e=>{const b=e.target.closest('.sw');if(!b)return;
   active=active===b.dataset.c?null:b.dataset.c;
   $('rail').querySelectorAll('.sw').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.c===active)));render();});
@@ -445,7 +462,7 @@ $('qt').addEventListener('input',renderTags);
 $('qm').addEventListener('input',renderMods);$('sortM').addEventListener('change',renderMods);
 $('copy').addEventListener('click',e=>copy(tsv(),e.target));
 $('copyT').addEventListener('click',e=>copy(tsvTags(),e.target));
-clearEl.addEventListener('click',()=>{active=null;qEl.value='';
+clearEl.addEventListener('click',()=>{active=null;tagF=null;qEl.value='';$('tagf').value='';
   $('rail').querySelectorAll('.sw').forEach(x=>x.setAttribute('aria-pressed','false'));render();qEl.focus();});
 
 const lb=$('lb'),lbin=$('lbin');
