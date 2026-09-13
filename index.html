@@ -326,12 +326,12 @@ function render(){
       return head+rows;
     }).join('');
   } else if(isT){
-    headEl.innerHTML=`<tr><th class="tdimg"></th><th>No.</th><th>Key</th><th>Name (${lang.toUpperCase()})</th>
+    headEl.innerHTML=`<tr><th class="tdimg"></th><th>No.</th><th>Tags</th><th>Name (${lang.toUpperCase()})</th>
       <th>Colour</th><th>SP</th><th>Description</th><th>Synergy</th><th>Picks</th><th>Wins</th></tr>`;
     rowsEl.innerHTML=L.map(c=>`<tr data-id="${c.id}">
       <td class="tdimg"><img loading="lazy" src="${c.img}" alt=""></td>
       <td class="idc">${String(c.id).padStart(3,'0')}</td>
-      <td class="keyc">${esc(c.key)}</td>
+      <td class="keyc">${(c.tags&&c.tags.length)?c.tags.map(k=>`<span class="tagchip">${esc(tagName(k,lang))}</span>`).join(''):'<span class="na">—</span>'}</td>
       <td class="namec">${esc(T(c,lang).n)}</td>
       <td class="cc"><i style="background:${HUES[c.c]}"></i>${c.c}</td>
       <td class="spc">${c.st.cost??''}</td>
